@@ -1,3 +1,4 @@
+#made by LordQuerix <3
 import os
 import string
 import time
