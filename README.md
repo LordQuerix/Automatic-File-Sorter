@@ -1,3 +1,5 @@
+<h1 align="center">🗃Automatic File Sorter🗃</h1>
+
 # ENGLISH
 
 # 📝 Short description of the script
