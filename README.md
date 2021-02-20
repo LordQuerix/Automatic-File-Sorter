@@ -7,7 +7,7 @@ Automatic file sorter, automatically sorts files into folders, you can add your 
 
 # 🤖 Requirements
 • Python
-the script should install the rest of necessary components itself | on first launch after installing Requirements script can give error, just run it again
+• the script should install the rest of necessary components itself | on first launch after installing Requirements script can give error, just run it again
 
 # ❓ How to install
 Download the file sort.py and run it in CMD / Terminal with the command 'python sort.py', the script will automatically create two files, one is to confirm that components are installed, do not delete it because the script will download components again, the other is the configuration file, you can there rename files where files are sorted and add new extensions, you cannot add new file types (e.g. a new folder called Python Scripts, and set python scripts to go there) without modifying the code!
@@ -20,7 +20,7 @@ Automatyczny sortownik plików, automatycznie sortuje pliki do folderów, można
 
 # 🤖 Potrzebne składniki
 • Python
-Skrypt powinnien sam pobrać resztę potrzebnych składników
+• Skrypt powinnien sam pobrać resztę potrzebnych składników
 
 # ❓ Jak zainstalować
 Pobierz plik sort.py i uruchom go w CMD/Terminalu za pomocą komendy 'python sort.py', Skrypt automatycznie stworzy dwa pliki, jeden to potwierdzenie zainstalowania składników nie usuwaj go bo skrypt znowu będzie pobierać składniki, drugi to plik konfiguracyjny, możesz tam zmienić nazwy plików do których są sortowane pliki i dodać nowe rozszerzenia, nie można dodać nowych typu plików(np nowy folder o nazwie Skrypty pythona, i ustawić by tam lądowały skrypty pythona) bez ingerencji w kod!
