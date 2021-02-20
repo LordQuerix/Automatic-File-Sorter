@@ -1,4 +1,4 @@
-#made by LordQuerix <<3
+#made by LordQuerix <3
 import os
 import string
 import time
@@ -49,9 +49,19 @@ filetext= f.readline()
 if filetext == "":
     f = open("settings.ini","a")
     pathforwrite = os.path.dirname(os.path.abspath(__file__))
-    f.write("[path]\npath=%s\*\ndocpath=%s\documents\nmusicpath=%s\music\nimgpath=%s\images\nexecpath=%s\executables\nvideopath=%s\Videos\ntorrentpath=%s\Torrents\nrarpath=%s\WinrarFiles\njarpath=%s\jar\ngimppath=%s\gimpprojects\npresentationspath=%s\presentations\nscriptspath=%s\scripts\ndllpath=%s\dlls\nisopath=%s\iso\notherpath=%s\others\n[images]\nfile_name=images\nextensions=.jpg .png .bmp .JPG .PNG .BMP\n[documents]\nfile_name=documents\nextensions=.doc .txt .docx .pdf .json .csv\n[music]\nfile_name=music\nextensions=.mp3 .wav .ogg .wov\n[video]\nfile_name=videos\nextensions=.mp4 .avi .mov .mkv .ts\n[torrent]\nfile_name=torrents\nextensions=.torrent\n[Winrar]\nfile_name=winrarfiles\nextensions=.rar .zip .7zip .7z\n[exec]\nfile_name=executables\nextensions=.exe .msi\n[jar]\nfile_name=jar\nextensions=.jar .java\n[gimp]\nfile_name=gimp\nextensions=.xcf\n[presentations]\nfile_name=presentations\nextensions=.pptx\n[iso]\nextensions=.iso\n[scripts]\nextensions=.lua .LUA .CT .ct .sk .SK\n[dll]\nextensions=.dll .DLL\n[others]\nextensions=.sfk .SFK .nfo .COM .rmskin" % (pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite))
+    f.write("[path]\npath=%s\*\ndocpath=%s\documents\nmusicpath=%s\music\nimgpath=%s\images\nexecpath=%s\executables\nvideopath=%s\Videos\ntorrentpath=%s\Torrents\nrarpath=%s\WinrarFiles\njarpath=%s\jar\ngimppath=%s\gimpprojects\npresentationspath=%s\presentations\nscriptspath=%s\scripts\ndllpath=%s\dlls\nisopath=%s\iso\notherpath=%s\others\n[images]\nfile_name=images\nextensions=.jpg .png .bmp .JPG .PNG .BMP .gif .GIF\n[documents]\nfile_name=documents\nextensions=.doc .txt .docx .pdf .json .csv .xlsx .ods\n[music]\nfile_name=music\nextensions=.mp3 .wav .ogg .wov\n[video]\nfile_name=videos\nextensions=.mp4 .avi .mov .mkv .ts\n[torrent]\nfile_name=torrents\nextensions=.torrent\n[Winrar]\nfile_name=winrarfiles\nextensions=.rar .zip .7zip .7z\n[exec]\nfile_name=executables\nextensions=.exe .msi\n[jar]\nfile_name=jar\nextensions=.jar .java\n[gimp]\nfile_name=gimp\nextensions=.xcf\n[presentations]\nfile_name=presentations\nextensions=.pptx\n[iso]\nextensions=.iso\n[scripts]\nextensions=.lua .LUA .CT .ct .sk .SK .js\n[dll]\nextensions=.dll .DLL\n[others]\nextensions=.sfk .SFK .nfo .COM .rmskin" % (pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite,pathforwrite))
     print("settings.ini file created, rerun the script")
     sys.exit()
+
+#change settings, script path on start up
+fin = open("settings.ini", "rt")
+pathforwrite = os.path.dirname(os.path.abspath(__file__))
+list_of_lines = fin.readlines()
+list_of_lines[1] = "path=" + pathforwrite + "\*\n"
+fin = open("settings.ini", "w")
+fin.writelines(list_of_lines)
+fin.close()
+
 Config.read("settings.ini")
 sections = Config.sections()
 sections_count = len(sections)
