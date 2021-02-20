@@ -1,5 +1,3 @@
-![alt text](https://github.com/LordQuerix/SFgame-autocollector/blob/main/sf%20game%20autocollector.png)
-
 # ENGLISH
 
 # 📝 Short description of the script
